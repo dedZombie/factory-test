@@ -1,6 +1,6 @@
 <template>
   <div id="number-item">
-    1
+    <button class="number-btn">{{ value }}</button>
   </div>
 </template>
 
@@ -8,20 +8,24 @@
 
 export default {
   name: 'NumberItem',
-  props: {
-    msg: String
+  props: ['value'],
+  data() {
+    return {
+      //
+    }
   }
 }
 </script>
 
 <style scoped>
-#number-item {
+.number-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
   background-color: lightgreen;
-  border-radius: 50%;
   color: white;
-  text-align: center;
   font-size: 22px;
-  flex: 0 0 16.6666667%;
-  max-width: 16.6666667%;
+  border: 0;
+  outline: none;
 }
 </style>
