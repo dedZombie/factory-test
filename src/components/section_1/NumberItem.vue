@@ -1,6 +1,6 @@
 <template>
   <div id="number-item">
-    <button class="number-btn">{{ value }}</button>
+    <button class="number-btn" :class="{ 'selected': isSelected }" @click="selectNum">{{ value }}</button>
   </div>
 </template>
 
@@ -11,7 +11,12 @@ export default {
   props: ['value'],
   data() {
     return {
-      //
+      isSelected: false
+    }
+  },
+  methods: {
+    selectNum: function() {
+      this.isSelected = !this.isSelected
     }
   }
 }
@@ -22,10 +27,13 @@ export default {
   width: 50px;
   height: 50px;
   border-radius: 50px;
-  background-color: lightgreen;
+  background-color: lightblue;
   color: white;
   font-size: 22px;
   border: 0;
   outline: none;
+}
+.selected {
+  background-color: lightgreen;
 }
 </style>
