@@ -1,6 +1,6 @@
 <template>
   <div id="number-item">
-    <button class="number-btn" :class="{ 'selected': isSelected }" @click="selectNum">{{ value }}</button>
+    <button class="number-btn" :class="{ 'selected': isSelected }" @click.prevent="selectNum">{{ value }}</button>
   </div>
 </template>
 

@@ -1,10 +1,12 @@
 <template>
-  <button id="add-ticket">DODAJ TIKET</button>
+  <div id="ticket-container">
+    <h1>Ticket container</h1>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'AddTicket',
+  name: 'TicketContainer',
   data() {
     return {
       // 
@@ -14,8 +16,5 @@ export default {
 </script>
 
 <style>
-#add-ticket {
-  width: 100%;
-  font-size: 40px;
-}
+
 </style>
